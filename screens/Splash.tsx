@@ -5,7 +5,7 @@ export default function Splash() {
         <SafeAreaView className="flex-1 items-center justify-center bg-black">
             <StatusBar barStyle={'light-content'} />
             <View>
-                <Text className="text-2xl font-bold text-zinc-50">
+                <Text className="text-2xl font-ubuntuBold color-zinc-50">
                     React Real Time Chat
                 </Text>
             </View>

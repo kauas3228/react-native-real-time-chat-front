@@ -3,28 +3,26 @@
     "name": "react-native-real-time-chat",
     "slug": "react-native-real-time-chat",
     "version": "1.0.0",
-
     "web": {
       "favicon": ""
     },
-
     "experiments": {
       "tsconfigPaths": true
     },
-
-    "plugins": [],
-
+    "plugins": [
+      "expo-font"
+    ],
     "orientation": "portrait",
     "icon": "",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
