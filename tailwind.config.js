@@ -15,6 +15,17 @@ module.exports = {
         ubuntu: ['Ubuntu_400Regular', 'sans-serif'],
         ubuntuBold: ['Ubuntu_700Bold', 'sans-serif'],
         LeckerliOne: ['LeckerliOne', 'sans-serif']
+      },
+      colors: {
+        primary: '#5B8DEF',
+        secondary: '#7D5EF4',
+        sentMessage: '#D1FADF',
+        receivedMessage: '#F2F2F2',
+        lightBackground: '#FFFFFF',
+        darkBackground: '#1E1E1E',
+        textPrimary: '#222222',
+        textSecondary: '#6B7280',
+        error: '#F87171',
       }
     },
   },

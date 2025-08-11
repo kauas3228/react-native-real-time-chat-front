@@ -1,12 +1,12 @@
-import useFontsLoader from 'hooks/useFontsLoader';
+import useFontsHook from 'hooks/useFontsHook';
 import './global.css';
 import Splash from 'screens/Splash';
 import { Text } from 'react-native';
 
 export default function App() {
-  const fontsLoader = useFontsLoader();
+  const fontsLoader = useFontsHook();
 
-  if(!fontsLoader) {
+  if (!fontsLoader) {
     return <Text>Carregando</Text>
   }
 

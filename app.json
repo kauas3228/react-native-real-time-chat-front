@@ -6,6 +6,9 @@
     "web": {
       "favicon": ""
     },
+    "updates": {
+      "fallbackToCacheTimeput": 0
+    },
     "experiments": {
       "tsconfigPaths": true
     },
