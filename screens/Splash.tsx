@@ -1,11 +1,11 @@
 import Title from "components/ui/Title";
-import { SafeAreaView, StatusBar, View } from "react-native";
+import { SafeAreaView, StatusBar, View} from "react-native";
 
 export default function Splash() {
     return (
         <SafeAreaView className="flex-1 items-center justify-center bg-lightBackground">
             <StatusBar barStyle={'light-content'} />
-            <View>
+            <View className='animate-bounce'>
                 <Title title='RealTimeChat' color="color-textPrimary" />
             </View>
         </SafeAreaView>
