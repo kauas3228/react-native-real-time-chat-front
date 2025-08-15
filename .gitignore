@@ -11,10 +11,18 @@ npm-debug.*
 web-build/
 
 
-
-
 ios
+ios/build/
+ios/Pods/
+ios/Podfile.lock
+
 android
+
+android/app/build/
+android/.gradle/
+android/local.properties
+android/build/
+android/gradle/wrapper/gradle-wrapper.jar
 
 # macOS
 .DS_Store
