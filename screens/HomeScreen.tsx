@@ -1,13 +1,19 @@
-import Title from "components/ui/Title";
-import { View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+// Tab Screens
+import RequestScreen from "./RequestScreen";
+import ProfileScreen from "./ProfileScreen";
+import FriendsScreen from "./FriendsScreen";
 
 export default function HomeScreen() {
+
+    const Tab = createBottomTabNavigator();
+
     return (
-        <SafeAreaView className="flex-1 items-center justify-center bg-lightBackground">
-            <View className='animate-bounce'>
-                <Title title='HomeScreen' color="color-textPrimary" font="LeckerliOne" />
-            </View>
-        </SafeAreaView>
+        <Tab.Navigator>
+            <Tab.Screen name="Request" component={RequestScreen} />
+            <Tab.Screen name="Profile" component={ProfileScreen} />
+            <Tab.Screen name="Friends" component={FriendsScreen} />
+        </Tab.Navigator>
     )
 }

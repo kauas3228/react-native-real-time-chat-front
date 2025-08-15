@@ -17,8 +17,8 @@ export default function App() {
   const fontsLoader = useFontsHook();
   const Stack = createStackNavigator();
 
-  const [initialized] = useState<boolean>(false)
-  const [authenticated] = useState<boolean>(false)
+  const [initialized] = useState<boolean>(true)
+  const [authenticated] = useState<boolean>(true)
 
   if (!fontsLoader) {
     return <SplashScreen />
@@ -30,9 +30,7 @@ export default function App() {
       <Stack.Navigator>
         {!initialized ? (
           <>
-            <Stack.Screen name="Splash" component={SplashScreen} options={{
-              headerShown: false
-            }}/>
+            <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
           </>
         ) : !authenticated ? (
           <>
@@ -41,7 +39,7 @@ export default function App() {
           </>
         ) : (
           <>
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
             <Stack.Screen name="Seach" component={SearchScreen} />
             <Stack.Screen name="Message" component={MessageScreen} />
           </>
