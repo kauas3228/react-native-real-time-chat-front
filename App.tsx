@@ -3,6 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'react-native';
 import './global.css';
+
+// Font Awesome Service
+import './services/fontAwesome'
 // Import hooks
 import useFontsHook from 'hooks/useFontsHook';
 // Import components

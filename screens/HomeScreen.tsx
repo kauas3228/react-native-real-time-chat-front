@@ -1,16 +1,42 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
+import { TouchableOpacity } from "react-native";
+// Font awesome
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 // Tab Screens
 import RequestScreen from "./RequestScreen";
 import ProfileScreen from "./ProfileScreen";
 import FriendsScreen from "./FriendsScreen";
+import colors from "assets/colors/colors";
 
 export default function HomeScreen() {
 
     const Tab = createBottomTabNavigator();
 
     return (
-        <Tab.Navigator>
+        <Tab.Navigator
+            screenOptions={({route, navigation}) => ({
+                headerRight: () => (
+                    <TouchableOpacity className="mr-4">
+                        <FontAwesomeIcon icon='magnifying-glass' size={22} color={colors.primary} />
+                    </TouchableOpacity>
+                ),
+                tabBarIcon: ({ focused, color, size}) => {
+                    const icons: Record<string, any> = {
+                        Request: 'bell',
+                        Profile: 'user',
+                        Friends: 'inbox'
+                    }
+
+                    const icon = icons[route.name];
+
+                    return (
+                        <FontAwesomeIcon icon={icon} size={25} color={color} />
+                    )
+                },
+                tabBarActiveTintColor: `${colors.primary}`,
+                tabBarShowLabel: false
+            })}
+        >
             <Tab.Screen name="Request" component={RequestScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
             <Tab.Screen name="Friends" component={FriendsScreen} />
