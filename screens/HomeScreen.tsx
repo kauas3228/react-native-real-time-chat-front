@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { TouchableOpacity } from "react-native";
+import { Image, TouchableOpacity, View } from "react-native";
 // Font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 // Tab Screens
@@ -15,6 +15,13 @@ export default function HomeScreen() {
     return (
         <Tab.Navigator
             screenOptions={({route, navigation}) => ({
+                headerLeft: () => (
+                    <View className="ml-3 mr-3">
+                        <Image 
+                        className="w-12 h-12 rounded-full bg-receivedMessage"
+                        source={require('../assets/images/profile.png') } />
+                    </View>
+                ),
                 headerRight: () => (
                     <TouchableOpacity className="mr-4">
                         <FontAwesomeIcon icon='magnifying-glass' size={22} color={colors.primary} />
