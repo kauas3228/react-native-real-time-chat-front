@@ -21,7 +21,7 @@ export default function App() {
   const Stack = createStackNavigator();
 
   const [initialized] = useState<boolean>(true)
-  const [authenticated] = useState<boolean>(true)
+  const [authenticated] = useState<boolean>(false)
 
   if (!fontsLoader) {
     return <SplashScreen />
@@ -37,8 +37,8 @@ export default function App() {
           </>
         ) : !authenticated ? (
           <>
-            <Stack.Screen name="SignIn" component={SignInScreen} />
-            <Stack.Screen name="SignUp" component={SignUpScreen} />
+            <Stack.Screen name="SignIn" component={SignInScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
           </>
         ) : (
           <>
